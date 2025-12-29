@@ -97,7 +97,7 @@ export function Hero() {
       <div className="mt-20 flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto bg-white/5 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
         <div className="w-32 h-32 md:w-48 md:h-48 rounded overflow-hidden flex-shrink-0 border-4 border-purple-400/30">
           <img
-            src="/images/normal/profile-placeholder.png"
+            src="/placeholder-user.jpg"
             alt="Profile photo"
             className="w-full h-full object-cover"
           />
