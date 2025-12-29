@@ -46,11 +46,13 @@ function FloatingPaths({ position }: { position: number }) {
 
 export function Hero() {
   return (
-    <section className="px-6 py-20 md:px-12 lg:px-24 relative overflow-hidden">
+    <section className="px-6 md:px-6 lg:px-24 relative overflow-hidden pt-5 pb-20 z-4">
       <div className="absolute inset-0">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
+        <FloatingPaths position={0.5} />
       </div>
+      <div className="  rounded-3xl p-10 z-5  relative my-30 border border-white/20 backdrop-blur-sm shadow-lg">
 
       <div className="max-w-4xl relative z-10 py-40">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight mb-6">
@@ -108,6 +110,7 @@ export function Hero() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
           </p>
         </div>
+      </div>
       </div>
     </section>
   )
