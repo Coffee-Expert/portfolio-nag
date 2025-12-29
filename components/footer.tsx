@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { MagicButton } from "./magic-button"
 
 export function Footer() {
   return (
@@ -13,45 +15,25 @@ export function Footer() {
             working together?
           </h2>
 
-          {/* Decorative badge */}
-          <div className="inline-flex items-center justify-center mb-8">
-            <div className="w-20 h-20 rounded-full border-2 border-purple-400/30 flex items-center justify-center">
-              <svg className="w-12 h-12" viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="30"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-purple-400/40"
-                />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="20"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  className="text-purple-400/30"
-                  strokeDasharray="3 3"
-                />
-                <path
-                  d="M50 30 L50 40 M50 60 L50 70 M30 50 L40 50 M60 50 L70 50"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-purple-400/50"
-                />
-                <circle cx="50" cy="50" r="6" fill="currentColor" className="text-purple-400/60" />
-              </svg>
-            </div>
-          </div>
+        
 
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white border-0 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-              Get In Touch ↗
-            </Button>
+            <MagicButton href="/contact" className="my-10 hover:from-purple-500 hover:to-purple-400 text-white border-0 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+              Get In Touch
+            </MagicButton>
+              {/* Decorative badge */}
+          <div className="inline-flex items-center justify-center my-8">
+  <Image
+    src="/talk.png"
+    alt="Decorative badge"
+    width={200}
+    height={200}
+    className="slow-rotate"
+  />
+</div>
+
           </Link>
+          
         </div>
       </div>
 
@@ -61,7 +43,7 @@ export function Footer() {
           <Link href="/" className="text-white/80 text-lg font-serif italic hover:text-white transition-colors">
             Nag Nine
           </Link>
-          <p className="text-white/40 text-sm">©2024 - All Rights Reserved</p>
+          <p className="text-white/40 text-sm">©2025 - All Rights Reserved</p>
         </div>
 
         <nav className="flex items-center gap-6">

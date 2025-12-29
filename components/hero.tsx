@@ -17,8 +17,8 @@ function FloatingPaths({ position }: { position: number }) {
   }))
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
-      <svg className="w-full h-full text-purple-400/20" viewBox="0 0 696 316" fill="none">
+    <div className="absolute inset-0 pointer-events-none z-0">
+      <svg className="w-full h-full text-white" viewBox="0 0 696 316" fill="none">
         {paths.map((path) => (
           <motion.path
             key={path.id}
@@ -52,7 +52,7 @@ export function Hero() {
         <FloatingPaths position={-1} />
       </div>
 
-      <div className="max-w-4xl relative z-10">
+      <div className="max-w-4xl relative z-10 py-40">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight mb-6">
           I create{" "}
           <span className="italic font-serif bg-gradient-to-r from-purple-400 via-pink-400 to-purple-300 bg-clip-text text-transparent">

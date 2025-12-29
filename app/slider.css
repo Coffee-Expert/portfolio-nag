@@ -1,3 +1,11 @@
+/* Hide vertical scrollbar for slider-section */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
+}
 /* Global reset */
 * {
   margin: 0;

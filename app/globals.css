@@ -126,3 +126,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.slow-rotate {
+  animation: slowSpin 12s linear infinite;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.slow-rotate:hover {
+  animation-play-state: paused;
+}

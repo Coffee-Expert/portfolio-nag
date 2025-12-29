@@ -40,13 +40,18 @@ export default function Slider3D({ images }: Slider3DProps) {
     const sliderSection = document.querySelector(".slider-section")
     if (sliderSection) {
       sliderSection.addEventListener("scroll", handleScroll, { passive: true })
-    }
-
-    return () => {
-      if (sliderSection) {
+      // Prevent mouse wheel from scrolling this section
+      const handleWheel = (e: Event) => {
+        (e as WheelEvent).preventDefault()
+      }
+      sliderSection.addEventListener("wheel", handleWheel, { passive: false })
+      // Clean up
+      return () => {
         sliderSection.removeEventListener("scroll", handleScroll)
+        sliderSection.removeEventListener("wheel", handleWheel)
       }
     }
+    return () => {}
   }, [images])
 
   const handleMouseOver = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -63,7 +68,31 @@ export default function Slider3D({ images }: Slider3DProps) {
 
   return (
     <>
-      <div className="slider-section">
+      <div className=" slider-section hide-scrollbar min-h-[90vh]">
+        <h2
+          className="text-white hidden md:block"
+          style={{
+            textAlign: 'left',
+            fontWeight: 200,
+            fontSize: 'clamp(10.25rem, 10vw, 5rem)',
+            marginBottom: '1.5rem',
+            letterSpacing: '0.02em',
+          }}
+        >
+          See. <br />  <br />
+        </h2>
+        <h2
+          className="text-white hidden md:block"
+          style={{
+            textAlign: 'right',
+            fontWeight: 200,
+            fontSize: 'clamp(10.25rem, 10vw, 5rem)',
+            marginBottom: '1.5rem',
+            letterSpacing: '0.02em',
+          }}
+        >
+          Believe.
+        </h2>
         <div className="slider" aria-label="3D image slider">
           {cards.map((card) => (
             <div

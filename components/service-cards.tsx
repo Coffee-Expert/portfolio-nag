@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge"
 
 export function ServiceCards() {
   return (
-    <section className="px-6 py-12 md:px-12 lg:px-24">
+    <section className="px-6 pb-12 md:px-12 lg:px-24">
       <div className="grid md:grid-cols-2 gap-6 max-w-7xl">
         {/* Design Card */}
         <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl p-8 md:p-10">
