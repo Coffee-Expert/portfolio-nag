@@ -243,9 +243,9 @@ export function GlassmorphismNav() {
                   style={{
                     animationDelay: isOpen ? `${navigation.length * 80 + 150}ms` : "0ms",
                   }}
-                  onClick={() => scrollToSection("#contact")}
+                  onClick={() => scrollToSection("/contact")}
                 >
-                  <span className="mr-2">Get Started</span>
+                  <span className="mr-2">Let's Talk</span>
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>

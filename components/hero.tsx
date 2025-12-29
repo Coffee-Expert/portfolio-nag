@@ -92,6 +92,23 @@ export function Hero() {
           </svg>
         </div>
       </div>
+
+      {/* Who I Am Section */}
+      <div className="mt-20 flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto bg-white/5 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
+        <div className="w-32 h-32 md:w-48 md:h-48 rounded overflow-hidden flex-shrink-0 border-4 border-purple-400/30">
+          <img
+            src="/images/normal/profile-placeholder.png"
+            alt="Profile photo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex-1 text-white">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-2">Who I Am</h3>
+          <p className="text-white/80 text-base md:text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est.
+          </p>
+        </div>
+      </div>
     </section>
   )
 }
