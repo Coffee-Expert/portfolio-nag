@@ -26,11 +26,11 @@
               style={{ WebkitBackdropFilter: 'blur(24px)' }}
             >
               <div className="relative w-full">
-                {/* Top row: Only NAG and underline when not scrolled */}
+                {/* Top row: Only IADU STUDIO and underline when not scrolled */}
                 <AnimatePresence initial={false}>
                   {!scrolled && (
                     <motion.div
-                      key="nag-row"
+                      key="IADU STUDIO-row"
                       initial={{ opacity: 0, y: -24 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -24 }}
@@ -38,7 +38,7 @@
                       className="flex items-center justify-between px-6 md:px-12 lg:px-24 h-20"
                       style={{ overflow: 'hidden', position: 'relative' }}
                     >
-                      <span className="text-white text-2xl font-serif italic tracking-widest select-none">NAG</span>
+                      <span className="text-white text-2xl font-serif italic tracking-widest select-none">IADU STUDIO</span>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -72,7 +72,7 @@
                       style={{ minHeight: 0 }}
                     >
                       <Link href="/" className="text-white text-lg font-serif italic">
-                        Nag Nine
+                        IADU STUDIO
                       </Link>
                       <nav className="hidden md:flex items-center gap-8">
                         <Link

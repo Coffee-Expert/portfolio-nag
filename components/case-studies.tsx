@@ -6,46 +6,86 @@ import { Button } from "@/components/ui/button"
 // Placeholder images for now - will be replaced with Drive images
 const caseStudies = [
   {
-    id: "korba",
-    title: "Korba",
-    type: "CASE STUDY",
-    tags: ["Web design", "Development"],
+    id: "superstar-beverages",
+    title: "SuperStar Beverages",
+    type: "BRANDING & SOCIAL STRATEGY",
+    tags: ["Branding", "Instagram Strategy", "Wellness"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare dolor.",
-    image: "/abstract-neon-gradient-purple-orange.jpg",
-    variant: "light" as const,
-  },
-  {
-    id: "trailhive",
-    title: "TrailHive",
-    type: "CASE STUDY",
-    tags: ["Concept design", "Brand identity"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare dolor.",
-    image: "/abstract-neon-gradient-purple-pink-glow.jpg",
+      "Brand identity and Instagram growth strategy for a wellness startup, focused on positioning the brand as energetic, clean, and lifestyle-driven while increasing audience engagement.",
+    image: "/images/prem/i4.jpeg",
     variant: "dark" as const,
   },
   {
-    id: "nexus",
-    title: "Nexus",
-    type: "CASE STUDY",
-    tags: ["Visual identity", "Art direction"],
+    id: "cabin-mate",
+    title: "Cabin Mate",
+    type: "DIGITAL IDENTITY",
+    tags: ["Brand Identity", "Web Presence", "Tech"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare dolor.",
-    image: "/abstract-holographic-gradient-blue-purple.jpg",
+      "Complete digital identity for a tech solutions firm, including visual branding, tone of voice, and foundational assets designed to scale with the company’s growth.",
+    image: "/images/prem/i7.png",
+    variant: "dark" as const,
+  },
+  {
+    id: "helpful-cupcake",
+    title: "Helpful Cupcake",
+    type: "VISUAL DESIGN & LAUNCH",
+    tags: ["Logo Design", "Menu Design", "Instagram Launch"],
+    description:
+      "Logo design, menu visuals, and a digital launch campaign for a dessert brand, including the creation and positioning of its Instagram presence.",
+    image: "/images/prem/i8.jpg",
     variant: "dark" as const,
   },
 ]
 
 export function CaseStudies() {
   return (
-    <section className="px-6 py-12 md:px-12 lg:px-24 space-y-6">
-      {caseStudies.map((study) => (
-        <CaseStudyCard key={study.id} {...study} />
-      ))}
+    <section className="px-6 py-20 md:px-12 lg:px-24">
+      
+      {/* Section Intro */}
+      <div className="max-w-4xl mb-16">
+        
+        {/* Eyebrow / kicker */}
+        <p className="text-sm uppercase tracking-wider text-purple-600 mb-4">
+          Case Studies
+        </p>
+
+        {/* Main heading */}
+        <h2 className="text-4xl md:text-6xl font-light text-white leading-tight mb-6">
+          Every project <br className="hidden md:block" />
+          is a story
+        </h2>
+
+        {/* Supporting copy */}
+        <p className="max-w-3xl text-lg text-white leading-relaxed">
+          Each project we take on is built on strategy, designed with precision,
+          and powered by creativity. Here’s a glimpse of how we’ve helped
+          startups and small businesses define their identity, elevate their
+          marketing, and connect with their audience.
+        </p>
+
+      </div>
+
+      {/* Case Study Cards */}
+      <div className="space-y-8">
+        {caseStudies.map((study) => (
+          <CaseStudyCard key={study.id} {...study} />
+        ))}
+      </div>
+
+         {/* Closing line */}
+      <div className="mt-10 text-center">
+        <p className="text-gray-500 text-3xl">
+          And yours next.
+        </p>
+                <p className="text-gray-500 text-3xl">
+hopefully..</p>
+      </div>
+
+
     </section>
   )
 }
+
 
 function CaseStudyCard({
   title,
@@ -138,3 +178,5 @@ function CaseStudyCard({
     </div>
   )
 }
+
+
